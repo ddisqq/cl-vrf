@@ -6,7 +6,11 @@
 (defpackage #:cl-vrf
   (:use #:cl)
   (:export
-   #:with-vrf-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-vrf-timing
    #:vrf-batch-process
    #:vrf-health-check#:cl-vrf-error
    #:cl-vrf-validation-error#:vrf-context
