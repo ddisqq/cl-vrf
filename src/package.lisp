@@ -1,11 +1,16 @@
 ;; Copyright (c) 2024-2026 Parkian Company LLC. All rights reserved.
 ;; SPDX-License-Identifier: Apache-2.0
 
-(in-package :cl-user)
+(in-package #:cl-user)
 
-(defpackage :CL_VRF
-  (:use :cl)
+(defpackage #:cl-vrf
+  (:use #:cl)
   (:export
-  #:operation))
-
-(in-package :CL_VRF)
+   #:with-vrf-timing
+   #:vrf-batch-process
+   #:vrf-health-check#:cl-vrf-error
+   #:cl-vrf-validation-error#:vrf-context
+   #:process-vrf
+   #:shutdown-vrf
+   #:initialize-vrf
+   #:validate-vrf))

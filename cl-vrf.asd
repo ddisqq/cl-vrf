@@ -6,15 +6,16 @@
 (asdf:defsystem #:cl-vrf
   :description "Standalone Verifiable Random Functions (VRF) implementation"
   :version "0.1.0"
-  :author "Parkian Company LLC"
+  :author "Park Ian Co"
   :license "Apache-2.0"
   :depends-on ()
   :serial t
   :components ((:file "package")
                (:module "src"
-                :serial t
-                :components ((:file "crypto")
-                             (:file "vrf")))))
+                :components ((:file "package")
+                             (:file "conditions" :depends-on ("package"))
+                             (:file "types" :depends-on ("package"))
+                             (:file "cl-vrf" :depends-on ("package" "conditions" "types")))))))
 
 (asdf:defsystem #:cl-vrf/test
   :description "Tests for cl-vrf"
